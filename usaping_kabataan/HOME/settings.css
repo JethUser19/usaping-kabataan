@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #086a7e;
+  color: #fff;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #04364a;
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar .logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: #176b87;
+  border-radius: 5px;
+}
+
+.sidebar .bottom-menu {
+  margin-top: 50px;
+}
+
+.sidebar .user {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.main {
+  margin-left: 270px;
+  padding: 20px;
+}
+
+.tabs {
+  margin-top: 10px;
+}
+
+.tabs button {
+  padding: 10px 15px;
+  margin-right: 5px;
+  background: #176b87;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: #64ccc5;
+}
+
+.settings-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+}
+
+.settings-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.settings-form input,
+.settings-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.phone-group {
+  display: flex;
+  gap: 10px;
+  
+}
+
+.photo-section {
+  margin-bottom: 15px;
+}
+
+.form-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.save-btn {
+  background: #64ccc5;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #ddd;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}

@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #b2ebf2;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #056571;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+
+  /* Sticky Sidebar */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.subtitle span {
+  display: block;
+  font-style: italic;
+  color: #c0f0f4;
+}
+
+.nav-buttons {
+  margin-top: 20px;
+}
+
+.nav-btn {
+  display: block;
+  background-color: #10b6c0;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  background-color: #0c8c96;
+}
+
+/* Log Out Button */
+.logout-button {
+  margin-top: auto;
+  text-align: center; /* Center the button */
+}
+
+.logout-button button {
+  padding: 12px 20px;
+  background-color: #f44336; /* Red background for log out */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%; /* Full width to match sidebar layout */
+  transition: background-color 0.3s ease;
+}
+
+.logout-button button:hover {
+  background-color: #e53935; /* Darker red on hover */
+}
+
+footer {
+  font-size: 12px;
+  color: #ddd;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #c0f0f4;
+  text-decoration: none;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #e0f7fa;
+  margin-left: 270px; /* Added gap between sidebar and main content */
+}
+
+.tracker-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tracker-card h2 {
+  font-size: 24px;
+  color: #006064;
+}
+
+.mood-row {
+  margin: 15px 0;
+}
+
+.mood-label {
+  font-size: 18px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.bar.happy {
+  background-color: #4caf50;
+}
+.bar.sad {
+  background-color: #f44336;
+}
+.bar.angry {
+  background-color: #d32f2f;
+}
+.bar.anxious {
+  background-color: #03a9f4;
+}
+.bar.tired {
+  background-color: #ffb300;
+}
+
+.summary {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #006064;
+}
+
+/* ========== Responsive Layout ========== */
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  .nav-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .main-content {
+    padding: 20px;
+    margin-left: 0;
+  }
+
+  .logo,
+  .subtitle {
+    font-size: 16px;
+  }
+
+  footer {
+    display: none; /* Optional: hide footer on small screens */
+  }
+}
+
+/* For mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+
+  .post-form textarea,
+  .event-form textarea,
+  .event-form input {
+    font-size: 14px;
+  }
+
+  .post-card,
+  .event-card,
+  .tracker-card {
+    padding: 15px;
+  }
+}

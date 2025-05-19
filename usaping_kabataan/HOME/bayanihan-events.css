@@ -1,0 +1,281 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #d1f0f6;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #056571;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Logo with image and text */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.subtitle span {
+  display: block;
+  font-style: italic;
+  color: #c0f0f4;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-btn {
+  background-color: #10b6c0;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  background-color: #0c8c96;
+}
+
+footer {
+  font-size: 12px;
+  color: #ddd;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #c0f0f4;
+  text-decoration: none;
+}
+
+/* Main content adjusted for fixed sidebar with gap */
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #e0f7fa;
+  overflow-y: auto;
+  margin-left: 270px; /* Increase the margin-left to create a gap */
+}
+
+h2 {
+  font-size: 28px;
+  color: #004d40;
+}
+
+.subheading {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.event-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.event-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.join-btn {
+  background-color: #00bfa5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.delete-btn {
+  background-color: transparent; /* Remove the red background */
+  color: #ff0000; /* Red text color */
+  border: none; /* Remove border */
+  padding: 5px 10px; /* Adjust padding */
+  border-radius: 50%; /* Keep circular shape */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #cc0000; /* Darker red on hover */
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+.event-form {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.event-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.event-form button {
+  align-self: flex-start;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Log Out Button */
+.logout-button {
+  margin-top: auto;
+  text-align: center; /* Center the button */
+}
+
+.logout-button button {
+  padding: 12px 20px;
+  background-color: #f44336; /* Red background for log out */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%; /* Full width to match sidebar layout */
+  transition: background-color 0.3s ease;
+}
+
+.logout-button button:hover {
+  background-color: #e53935; /* Darker red on hover */
+}
+
+/* ========== Responsive Layout ========== */
+
+/* For tablets */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: static;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .nav-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  .nav-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .main-content {
+    padding: 20px;
+    margin-left: 0;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+/* For mobile */
+@media (max-width: 480px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+
+  .event-card,
+  .event-form {
+    padding: 15px;
+  }
+
+  .event-form input {
+    font-size: 14px;
+  }
+}

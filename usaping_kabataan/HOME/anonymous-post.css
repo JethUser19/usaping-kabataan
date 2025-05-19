@@ -1,0 +1,256 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #004e64, #00a6a6);
+  color: white;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  background-color: #056571;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.subtitle span {
+  display: block;
+  font-style: italic;
+  color: #c0f0f4;
+}
+
+.nav-buttons {
+  margin-top: 20px;
+}
+
+.nav-btn {
+  display: block;
+  background-color: #10b6c0;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  background-color: #0c8c96;
+}
+
+footer {
+  font-size: 12px;
+  color: #ddd;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #c0f0f4;
+  text-decoration: none;
+}
+
+.main-content {
+  margin-left: 270px; /* Increased space for gap between sidebar and content */
+  flex: 1;
+  padding: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.subheading {
+  font-size: 14px;
+  color: #e0f7fa;
+  margin-bottom: 20px;
+}
+
+.post-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  resize: none;
+  min-height: 80px; /* Shortened height */
+}
+
+.post-form button {
+  margin-top: 8px; /* Reduced margin for compactness */
+  background-color: #00c3c3;
+  color: white;
+  padding: 8px 14px; /* Smaller padding for a more compact button */
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px; /* Smaller text size */
+}
+
+.posts-container {
+  margin-top: 20px;
+}
+
+.post-card {
+  background-color: rgba(0, 48, 73, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 2px solid #00a6a6; /* Adding a border to create padding box effect */
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.post-actions button {
+  background: none;
+  border: none;
+  color: white;
+  margin-left: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Log Out Button */
+.logout-button {
+  margin-top: auto;
+  text-align: center; /* Center the button */
+}
+
+.logout-button button {
+  padding: 12px 20px;
+  background-color: #f44336; /* Red background for log out */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%; /* Full width to match sidebar layout */
+  transition: background-color 0.3s ease;
+}
+
+.logout-button button:hover {
+  background-color: #e53935; /* Darker red on hover */
+}
+
+/* ========== Responsive Layout ========== */
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  .nav-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .main-content {
+    padding: 20px;
+    margin-left: 0;
+  }
+
+  .logo,
+  .subtitle {
+    font-size: 16px;
+  }
+
+  footer {
+    display: none; /* Optional: hide footer on small screens */
+  }
+}
+
+/* For mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+
+  .post-form textarea,
+  .event-form textarea,
+  .event-form input {
+    font-size: 14px;
+  }
+
+  .post-card,
+  .event-card,
+  .tracker-card {
+    padding: 15px;
+  }
+}
